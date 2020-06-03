@@ -11,5 +11,6 @@ canvas{
     cursor: not-allowed;
 }
 #high{
-    float: right;
+    position: relative;
+    left: 500px;
 }
