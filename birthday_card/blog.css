@@ -1,0 +1,58 @@
+.container{
+    min-height: 1200px;
+    position: relative;
+}
+.row>div{
+    height: 650px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+}
+/* updated */
+.row{
+    perspective: 1500px;  /*For 3-d effect. Try toggling around with it!*/
+}
+#cover {
+    background-color: yellow;
+    z-index: 1;
+    /* updated */
+    backface-visibility: hidden;  /*makes the page invisible from behind, i.e., after rotation */
+    transition: transform 2s;     /*the transition takes 2s to happen*/
+    transform-style: preserve-3d; /*makes the transition with 3-d effect*/
+    transform-origin: left;       /*sets the position of axis to rotate about. left takes it to the left
+                                    of the div*/
+}
+#left {
+    background-color: blue;
+    left: 0%;
+    /* updated */
+    backface-visibility: hidden;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+    transform-origin: right;
+}
+#right{
+    background-color: pink;
+}
+.button{
+    background-color: red;
+    white-space: nowrap;  /*to prevent the content of button from going to next line*/
+    color: green;
+    font-size: 20px;
+    padding: 2px;
+    position: absolute;
+    left: 96%;
+    top: 550px;
+    transform: rotate(-90deg); /*rotated the button*/
+}
+.button:hover{
+    cursor: pointer; /*cursor turns to pointer when you hover over the button*/
+}
+/* updated */
+.is-flipped-left{
+    transform: rotateY(180deg);  /*The element with this class rotates about Y-axis by 180 deg clockwise*/
+}
+.is-flipped-cover{
+    transform: rotateY(-180deg); /*The element with this class rotates about Y-axis by 180 deg anti-clockwise*/
+}
+
