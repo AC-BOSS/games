@@ -77,9 +77,10 @@ img {
     font-size: 20px;
     padding: 2px;
     position: absolute;
-    left: 96%;
+    left: 101.7%;
     top: 550px;
     transform: rotate(-90deg);
+    transform-origin: left;
 }
 .button:hover{
     cursor: pointer;
